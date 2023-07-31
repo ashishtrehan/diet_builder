@@ -31,8 +31,8 @@ def get_fitness(x):
     m = nutrition(x)
     # return (np.sum(p)*4.0-np.sum(s))/np.sum(c)
     sigma = np.sum(m,axis=0)
-    # sugar_constraint = np.where(sigma[2]>0,1,0)
-    # print (sugar_constraint)
+    sugar_constraint = np.where(sigma[2]>0,1,0)
+    print (sugar_constraint)
     return sigma[0]*4.0/sigma[1]
     
 
