@@ -1,4 +1,6 @@
 import pandas as pd
+import difflib 
+import json
 import streamlit as st
 import streamlit.components.v1 as components
 from pandas.api.types import (
@@ -82,3 +84,11 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                     df = df[df[column].astype(str).str.contains(user_text_input)]
 
     return df
+
+
+
+def filter_dataset(df):
+    #Filtered DataFrame
+    return df
+
+
